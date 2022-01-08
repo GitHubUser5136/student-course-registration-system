@@ -117,4 +117,17 @@ public class courseRegController extends Controller implements Initializable {
     suggestcourse();
   }
 
+  ListView<String> courseList =new ListView<String>();
+
+courseList.getSelectionModel().getSelectedItem();
+
+courseList.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() 
+{
+    @Override
+    public void changed(ObservableValue<? extends String> observable, String Value)
+    {
+        System.out.println(Value);
+    }
+});
+
 }
